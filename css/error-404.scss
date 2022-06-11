@@ -1,0 +1,19 @@
+.error-404 {
+    text-align: center;
+
+    span {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        font-family: "Oxygen", sans-serif !important;
+        font-size: calc(min(20vw, 100px));
+        margin: 0 0 60px;
+        text-transform: none;
+
+        img {
+            width: calc(min(12vw, 60px));
+            position: relative;
+            top: calc(min(1vw, 5px));
+        }
+    }
+}

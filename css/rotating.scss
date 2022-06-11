@@ -1,0 +1,36 @@
+.columns {
+    &.rotating-left,
+    &.rotating-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rotating {
+        width: 30%;
+        height: auto;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+
+        img {
+            height: auto !important;
+            width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .columns {
+        &.rotating-left,
+        &.rotating-right {
+            padding-top: 50px;
+        }
+
+        .rotating {
+            width: 70%;
+            max-width: 350px;
+        }
+    }
+}

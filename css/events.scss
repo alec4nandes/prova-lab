@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;600&display=swap");
+
+$accent-color: #4cb0be;
+$link-color: #f7a34a;
+
+body.page-template-template-page-parallax-full-width .more-content-container {
+    max-width: 750px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+    .more-content-container {
+    display: flex;
+    justify-content: flex-end;
+
+    .read-more-content {
+        background-color: white;
+        box-sizing: border-box;
+        flex: 1;
+        margin-left: 15%;
+        overflow: auto;
+        padding-top: 20px;
+        padding-left: 80px;
+
+        .read-more-content-wrapper {
+            max-width: 100%;
+            width: fit-content;
+            margin: auto;
+
+            &,
+            .events-status,
+            .events-category {
+                & > *:not(div) {
+                    max-width: 900px;
+                    padding-right: 80px;
+                }
+            }
+
+            .events-spacer {
+                height: 80px;
+            }
+
+            #events,
+            #bootcamps {
+                max-width: fit-content;
+
+                .events-status {
+                    margin-bottom: 110px;
+
+                    .events-wrapper {
+                        width: 100%;
+                        box-sizing: border-box;
+                        display: flex;
+                        gap: 15px;
+                        overflow-x: auto;
+                        padding: 15px 15px 15px 5px;
+
+                        .event-info {
+                            min-width: 250px;
+                            max-width: 250px;
+                            max-height: 420px;
+                            border-radius: 12px;
+                            box-shadow: 0 0 7px #ccc;
+                            box-sizing: border-box;
+                            overflow: auto;
+                            padding: 15px;
+
+                            .event-name {
+                                font-size: 1.3rem;
+                            }
+
+                            .date {
+                                color: $accent-color;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body:not(.page-template-template-page-parallax-full-width)
+        .more-content-container {
+        .read-more-content {
+            margin-left: 0;
+            padding: 0 0 15px 15px;
+
+            .read-more-content-wrapper {
+                &,
+                .events-status,
+                .events-category {
+                    & > *:not(div) {
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

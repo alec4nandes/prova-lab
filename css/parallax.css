@@ -1,0 +1,91 @@
+#landing .columns:not(.parallax-full-width) .content {
+  padding: 80px;
+}
+
+.columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.columns.parallax-left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.columns.parallax-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.columns.parallax-full-width .parallax {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.columns.parallax-full-width .parallax .content {
+  max-width: 750px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 80px auto;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.columns.parallax-full-width .parallax .content .parallax-full-width-box {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 15px;
+}
+
+.columns .content {
+  width: 70%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 80px 80px 20px;
+}
+
+.columns .parallax {
+  min-height: 350px;
+  width: 30%;
+  background-position: center;
+}
+
+.parallax {
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 640px) {
+  #landing .columns:not(.parallax-full-width) .content {
+    padding: 40px 15px 80px;
+  }
+  .columns.parallax-left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .columns.parallax-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .columns .content,
+  .columns .parallax {
+    width: 100%;
+  }
+  .columns .content {
+    max-width: 100%;
+    padding: 30px 15px 0;
+  }
+}
+/*# sourceMappingURL=parallax.css.map */

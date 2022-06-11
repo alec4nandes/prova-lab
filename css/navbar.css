@@ -1,0 +1,140 @@
+.navbar {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  z-index: 9999;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.navbar ul li a {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s;
+  white-space: nowrap;
+}
+
+.navbar #scroll-down {
+  height: 3rem;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.navbar #scroll-down.hidden {
+  height: 0;
+}
+
+.navbar #scroll-down.shown {
+  height: 3rem;
+}
+
+.navbar #scroll-down p {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll-down;
+          animation-name: scroll-down;
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0;
+  position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar ul li a {
+    padding: 15px 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .navbar ul li a,
+  .subscribe input[type="submit"] {
+    font-size: 15px !important;
+  }
+  .navbar ul li a {
+    padding: 15px 8px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .navbar .subscribe {
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  .navbar .mc4wp-response {
+    margin: 0 !important;
+  }
+}
+
+@-webkit-keyframes scroll-down {
+  0% {
+    top: 2px;
+  }
+  50% {
+    top: 12px;
+  }
+  100% {
+    top: 2px;
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    top: 2px;
+  }
+  50% {
+    top: 12px;
+  }
+  100% {
+    top: 2px;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

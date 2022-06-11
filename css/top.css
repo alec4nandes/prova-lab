@@ -1,0 +1,137 @@
+#top {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 42vw;
+}
+
+#top h1,
+#top h2,
+#top h3,
+#top h4,
+#top h5,
+#top h6 {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 300;
+}
+
+#top #top-section-content {
+  max-width: 550px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 7vw;
+  padding: 0 15px;
+}
+
+#top #top-section-content #content-wrapper {
+  text-align: center;
+}
+
+#top #top-section-content #content-wrapper #landing-logo {
+  width: 100%;
+}
+
+#top #top-section-content #content-wrapper #block-quote {
+  margin: 30px 0 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+  padding: 0;
+  text-align: center;
+}
+
+#top #top-section-content #content-wrapper #block-quote p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+#top #top-section-content #content-wrapper #block-quote.hidden {
+  opacity: 0;
+}
+
+#top #top-section-content #content-wrapper #block-quote.shown {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 640px), (max-height: 500px) {
+  #top #top-section-content {
+    max-width: 420px;
+  }
+  #top #top-section-content #content-wrapper #block-quote {
+    margin: 15px 0 30px;
+  }
+  #top #top-section-content #content-wrapper #block-quote p {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #top {
+    padding-right: 0;
+  }
+  #top #top-section-content {
+    width: 100%;
+    margin: auto;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #top #top-section-content #content-wrapper {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(20%, black));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black 20%);
+    margin-top: 100px;
+    padding-top: 40px;
+  }
+  #top #top-section-content #content-wrapper #block-quote {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  #top #top-section-content #content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #top #top-section-content #content-wrapper #block-quote,
+  #top #top-section-content #content-wrapper #block-quote p {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=top.css.map */

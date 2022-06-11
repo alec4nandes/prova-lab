@@ -1,0 +1,92 @@
+#landing {
+    .columns:not(.parallax-full-width) {
+        .content {
+            padding: 80px;
+        }
+    }
+}
+
+.columns {
+    // background-color: lightsalmon;
+    display: flex;
+    flex-wrap: wrap;
+
+    &.parallax-left {
+        justify-content: flex-start;
+    }
+
+    &.parallax-right {
+        justify-content: flex-end;
+    }
+
+    &.parallax-full-width {
+        .parallax {
+            flex: 1;
+
+            .content {
+                max-width: 750px;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 80px auto;
+                padding: 0 30px;
+                text-align: center;
+
+                .parallax-full-width-box {
+                    width: fit-content;
+                    margin: auto;
+                    padding: 15px;
+                }
+            }
+        }
+    }
+
+    .content {
+        width: 70%;
+        // background-color: lavender;
+        box-sizing: border-box;
+        padding: 80px 80px 20px;
+    }
+
+    // note: bg images should be taller than they are wide (portrait)
+    // for responsive parallax effect. I prefer 4:3, or 1:1 at very least!
+    .parallax {
+        min-height: 350px;
+        width: 30%;
+        // background-color: lightblue;
+        background-position: center;
+    }
+}
+
+.parallax {
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 640px) {
+    #landing {
+        .columns:not(.parallax-full-width) {
+            .content {
+                padding: 40px 15px 80px;
+            }
+        }
+    }
+
+    .columns {
+        &.parallax-left {
+            flex-direction: column;
+        }
+
+        &.parallax-right {
+            flex-direction: column-reverse;
+        }
+
+        .content,
+        .parallax {
+            width: 100%;
+        }
+
+        .content {
+            max-width: 100%;
+            padding: 30px 15px 0;
+        }
+    }
+}

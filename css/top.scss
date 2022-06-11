@@ -1,0 +1,123 @@
+#top {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 42vw;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Oxygen", sans-serif;
+        font-weight: 300;
+    }
+
+    #top-section-content {
+        max-width: 550px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        flex-direction: column;
+        margin-left: 7vw;
+        padding: 0 15px;
+
+        #content-wrapper {
+            text-align: center;
+
+            #landing-logo {
+                width: 100%;
+            }
+
+            #block-quote {
+                margin: 30px 0 0;
+                transition: opacity 2s;
+                padding: 0;
+                text-align: center;
+
+                p {
+                    font-size: 1.3rem;
+                    line-height: 2rem;
+                }
+
+                &.hidden {
+                    opacity: 0;
+                }
+
+                &.shown {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px), (max-height: 500px) {
+    #top {
+        #top-section-content {
+            max-width: 420px;
+
+            #content-wrapper {
+                #block-quote {
+                    margin: 15px 0 30px;
+
+                    p {
+                        font-size: 1.1rem;
+                        line-height: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #top {
+        padding-right: 0;
+
+        #top-section-content {
+            width: 100%;
+            margin: auto;
+            justify-content: flex-end;
+
+            #content-wrapper {
+                background-image: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0),
+                    black 20%
+                );
+                margin-top: 100px;
+                padding-top: 40px;
+
+                #block-quote {
+                    background-color: rgba(0, 0, 0, 0.6);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    #top {
+        #top-section-content {
+            #content-wrapper {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                #block-quote {
+                    &,
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

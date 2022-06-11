@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;600&display=swap");
+body.page-template-template-page-parallax-full-width .more-content-container {
+  max-width: 750px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 80px auto;
+  padding: 0 30px;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content {
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 15%;
+  overflow: auto;
+  padding-top: 20px;
+  padding-left: 80px;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper {
+  max-width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper > *:not(div),
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper .events-status > *:not(div),
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper .events-category > *:not(div) {
+  max-width: 900px;
+  padding-right: 80px;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper .events-spacer {
+  height: 80px;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #events,
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #bootcamps {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #events .events-status,
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #bootcamps .events-status {
+  margin-bottom: 110px;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #events .events-status .events-wrapper,
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #bootcamps .events-status .events-wrapper {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 15px 15px 15px 5px;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #events .events-status .events-wrapper .event-info,
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #bootcamps .events-status .events-wrapper .event-info {
+  min-width: 250px;
+  max-width: 250px;
+  max-height: 420px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 7px #ccc;
+          box-shadow: 0 0 7px #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: auto;
+  padding: 15px;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #events .events-status .events-wrapper .event-info .event-name,
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #bootcamps .events-status .events-wrapper .event-info .event-name {
+  font-size: 1.3rem;
+}
+
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #events .events-status .events-wrapper .event-info .date,
+body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper #bootcamps .events-status .events-wrapper .event-info .date {
+  color: #4cb0be;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 640px) {
+  body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content {
+    margin-left: 0;
+    padding: 0 0 15px 15px;
+  }
+  body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper > *:not(div),
+  body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper .events-status > *:not(div),
+  body:not(.page-template-template-page-parallax-full-width)
+.more-content-container .read-more-content .read-more-content-wrapper .events-category > *:not(div) {
+    padding-right: 15px;
+  }
+}
+/*# sourceMappingURL=events.css.map */
