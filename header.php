@@ -91,4 +91,4 @@
     <?php wp_head();?>
 </head>
 <!-- hidden while correctly positioning parallax elements -->
-<body <?php body_class();?> style="visibility: hidden;">
+<body <?php body_class();?>>

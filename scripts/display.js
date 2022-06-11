@@ -6,24 +6,22 @@ const topElem = document.getElementById("top"),
     parallaxElems = [...document.getElementsByClassName("parallax")];
 
 window.onload = () => {
-    resizeHandler();
+    resizeHandler({ withTimeout: false });
     transparentContentBg();
-    document.body.style.visibility = "visible";
     fadeInQuote();
 };
 
-window.onresize = resizeHandler;
+window.onresize = () => resizeHandler({ withTimeout: true });
 
-function resizeHandler() {
+const parallaxSetter = () =>
+    parallaxElems.forEach((elem) => {
+        setElemBgSize(elem);
+        parallaxScrollHandler(elem);
+    });
+
+function resizeHandler({ withTimeout }) {
     sizeTop();
-    setTimeout(
-        () =>
-            parallaxElems.forEach((elem) => {
-                setElemBgSize(elem);
-                parallaxScrollHandler(elem);
-            }),
-        100
-    );
+    withTimeout ? setTimeout(parallaxSetter, 100) : parallaxSetter();
 }
 
 document.body.onscroll = () => {
