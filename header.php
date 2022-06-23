@@ -11,24 +11,24 @@
             categoryIDs = <?php echo $category_ids; ?>;
     </script>
     <style>
-        a:not(.read-more), .subscribe-autofocus-link {
+        a:not(.custom-button), .subscribe-autofocus-link {
             color: <?php echo get_theme_mod('navbar_bg_color'); ?>;
         }
 
-        a:not(.read-more):hover, .subscribe-autofocus-link:hover {
+        a:not(.custom-button):hover, .subscribe-autofocus-link:hover {
             color: <?php echo get_theme_mod('landing_heading_color'); ?>;
         }
 
-        .navbar li a:hover, .read-more:hover {
+        .navbar li a:hover, .custom-button:hover {
             background-color: <?php echo get_theme_mod('landing_heading_color'); ?> !important;
             color: <?php echo get_theme_mod('navbar_link_color'); ?> !important;
         }
 
-        .navbar a, .read-more {
+        .navbar a, .custom-button {
             color: <?php echo get_theme_mod('navbar_link_color'); ?> !important;
         }
 
-        .navbar, #top .navbar ul, .navbar li, .read-more {
+        .navbar, #top .navbar ul, .navbar li, .custom-button {
             background-color: <?php echo get_theme_mod('navbar_bg_color'); ?> !important;
         }
 
@@ -41,7 +41,7 @@
         }
 
         hr,
-        body:not(.page-template-template-page-parallax-full-width):not(.page-template-template-page-rotating-left):not(.page-template-template-page-rotating-right) .more-content-container {
+        body:not(.page-template-template-page-parallax-full-width):not(.page-template-template-page-rotating-left):not(.page-template-template-page-rotating-right) .feature-image-side {
             background-color: <?php echo get_theme_mod('landing_heading_color'); ?>;
         }
 
@@ -91,4 +91,4 @@
     <?php wp_head();?>
 </head>
 <!-- hidden while correctly positioning parallax elements -->
-<body <?php body_class();?>>
+<body <?php body_class();?> style="visibility: hidden;">

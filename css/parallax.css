@@ -29,12 +29,6 @@
 }
 
 .columns.parallax-full-width .parallax .content {
-  max-width: 750px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 80px auto;
-  padding: 0 30px;
   text-align: center;
 }
 
@@ -44,9 +38,10 @@
   width: fit-content;
   margin: auto;
   padding: 15px;
+  text-align: center;
 }
 
-.columns .content {
+.columns:not(.parallax-full-width) .content {
   width: 70%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -65,6 +60,7 @@
 
 @media only screen and (max-width: 640px) {
   #landing .columns:not(.parallax-full-width) .content {
+    width: 100%;
     padding: 40px 15px 80px;
   }
   .columns.parallax-left {
@@ -84,7 +80,6 @@
     width: 100%;
   }
   .columns .content {
-    max-width: 100%;
     padding: 30px 15px 0;
   }
 }

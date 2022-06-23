@@ -7,8 +7,17 @@
   height: 55px;
 }
 
-.prova-page .columns .content {
+.content {
   max-width: 900px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30px;
+}
+
+.page-more-content .content,
+.parallax-full-width .content {
+  margin: 80px auto;
 }
 
 .prova-page .columns .content .section-title {
@@ -20,5 +29,10 @@
   width: 100%;
   margin: auto;
   padding: 80px 20px;
+}
+
+.prova-page .columns.plain .content,
+.prova-page .columns.plain .content > * {
+  text-align: center;
 }
 /*# sourceMappingURL=page.css.map */

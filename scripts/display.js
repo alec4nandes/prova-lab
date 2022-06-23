@@ -8,6 +8,7 @@ const topElem = document.getElementById("top"),
 window.onload = () => {
     resizeHandler({ withTimeout: false });
     transparentContentBg();
+    document.body.style.visibility = "visible";
     fadeInQuote();
 };
 
@@ -94,9 +95,9 @@ function parallaxScrollHandler(elem) {
             // changed from 50% to 25% to keep images more towards top of screen
             elem.id === "top"
                 ? isShort
-                    ? "-150px"
+                    ? "-100px"
                     : isSmall
-                    ? "-18vh"
+                    ? "-10vh"
                     : "50%"
                 : "25%"
         } + ${distanceFromCenter(elem) / factor}px)`);

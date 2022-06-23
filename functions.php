@@ -53,8 +53,8 @@ function load_styles_and_scripts()
     );
 
     wp_enqueue_style(
-        'events-style',
-        get_stylesheet_directory_uri() . '/css/events.css'
+        'featured-image-side-style',
+        get_stylesheet_directory_uri() . '/css/featured-image-side.css'
     );
 
     wp_enqueue_style(

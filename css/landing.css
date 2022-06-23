@@ -1,68 +1,5 @@
-main#landing .columns .content {
-  max-width: 750px;
-}
-
 main#landing .co-founder-info {
   display: none;
-}
-
-#landing-1 {
-  height: 500px;
-  width: 500px;
-  background-image: url("../images/prova-lab-splash.png");
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 80px auto;
-}
-
-#landing-1 .landing-page-1-content {
-  height: 480px;
-  width: 480px;
-  background-color: rgba(76, 176, 190, 0.95) !important;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-
-#landing-1 .landing-page-1-content h2 {
-  padding: 0 30px;
-}
-
-#landing-1 .landing-page-1-content input {
-  color: white;
-  text-align: center;
-}
-
-#landing-1 .landing-page-1-content input[type="text"], #landing-1 .landing-page-1-content input[type="email"] {
-  border-bottom: 2px solid white;
-}
-
-#landing-1 .landing-page-1-content input[type="text"] {
-  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -76,8 +13,7 @@ main#landing .co-founder-info {
   main#landing .columns .content p {
     text-align: center;
   }
-  #landing-1,
-  #landing-1 .landing-page-1-content {
+  #landing-1 {
     height: 350px;
     width: 350px;
   }

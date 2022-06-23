@@ -53,6 +53,10 @@
   white-space: nowrap;
 }
 
+.navbar .subscribe {
+  margin: 10px 0;
+}
+
 .navbar #scroll-down {
   height: 3rem;
   margin: 0;
@@ -86,7 +90,7 @@
   position: relative;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
   .navbar ul li a {
     padding: 15px 10px;
   }
@@ -107,7 +111,6 @@
     width: 100vw;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    margin-bottom: 15px;
   }
   .navbar .mc4wp-response {
     margin: 0 !important;

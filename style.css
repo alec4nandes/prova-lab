@@ -27,12 +27,12 @@ a.section-title {
     text-shadow: none;
 }
 
-.prova-page a:not(.read-more) {
+.prova-page a:not(.custom-button) {
     font-weight: bold;
 }
 
-.read-more,
-.wpforms-submit-container .read-more {
+.custom-button,
+.wpforms-submit-container .custom-button {
     padding: 15px 30px !important;
 }
 
@@ -68,6 +68,21 @@ hr {
     margin: 60px 0;
 }
 
+/* for lists next to floating objects */
+
+ul:not(#menu-navigation) {
+    list-style: outside disc;
+    margin-left: 1em;
+}
+
+ul:not(#menu-navigation) li {
+    position: relative;
+    left: 1em;
+    padding-right: 1em;
+}
+
+/* end list float */
+
 p,
 .content ul li {
     font-size: 1.1rem;
@@ -76,6 +91,10 @@ p,
 
 .content ul li {
     padding: 10px;
+}
+
+.content a:not(.custom-button) {
+    font-weight: bold;
 }
 
 .content,
@@ -90,7 +109,7 @@ p,
     text-shadow: 2px 2px 2px #ccc;
 }
 
-.read-more {
+.custom-button {
     display: inline-block !important;
     font-size: 1.1rem !important;
     font-weight: 400;

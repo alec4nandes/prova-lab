@@ -17,7 +17,7 @@ $content_sections = get_extended(get_post(get_the_ID())->post_content);?>
         $args['template_name'],
         $other_args,
     );?>
-    <div class="more-content-container">
+    <div class="page-more-content">
         <?php get_template_part("templates/template", "more-content", $other_args); ?>
     </div>
 </div>
