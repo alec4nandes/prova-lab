@@ -87,7 +87,6 @@ function isVisible(top) {
 }
 
 function parallaxScrollHandler(elem) {
-    console.log(distanceFromCenter(elem));
     const { top } = elem.getBoundingClientRect(),
         isShort = isShortScreen(),
         isSmall = isSmallScreen();
@@ -107,12 +106,6 @@ function parallaxScrollHandler(elem) {
 
 function setElemBgSize(elem) {
     const style = getComputedStyle(elem);
-    console.log(
-        window.innerHeight -
-            (elem.offsetHeight -
-                ((+style.borderTopWidth || 0) +
-                    (+style.borderBottomWidth || 0)))
-    );
     elem.style.backgroundSize =
         elem.id === "top"
             ? isShortScreen()

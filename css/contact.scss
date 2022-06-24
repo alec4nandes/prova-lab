@@ -1,6 +1,7 @@
 .custom-contact {
-    max-width: 550px;
-    margin: auto !important;
+    max-width: 600px;
+    width: 100% !important;
+    display: inline-block;
 
     input[type="email"],
     input[type="text"] {
