@@ -1,4 +1,4 @@
-.subscribe {
+.navbar .subscribe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,10 +8,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 400 !important;
   padding: 0 15px;
 }
 
-.subscribe input {
+.navbar .subscribe input {
   height: 30px;
   border-radius: 0;
   -webkit-box-sizing: border-box;
@@ -20,53 +21,64 @@
   -webkit-border-radius: 0;
 }
 
-.subscribe input:focus {
+.navbar .subscribe input:focus {
   outline: 0;
 }
 
-.subscribe input[type="email"] {
+.navbar .subscribe input[type="email"], .navbar .subscribe input[type="submit"] {
+  font-size: 15px;
+}
+
+.navbar .subscribe input[type="email"] {
   padding-right: 10px;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.subscribe input[type="email"]:focus {
+.navbar .subscribe input[type="email"]:focus {
   background-color: lightgreen !important;
 }
 
-.subscribe input[type="submit"] {
+.navbar .subscribe input[type="submit"] {
   padding: 0 15px;
-  position: relative;
-  left: -5px;
 }
 
-.subscribe input[type="submit"]:hover {
+.navbar .subscribe input[type="submit"]:hover {
   cursor: pointer;
 }
 
-.mc4wp-response {
+.navbar .subscribe #mc_embed_signup_scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .subscribe #mc_embed_signup_scroll .mc-field-group {
+  width: 180px;
+}
+
+.navbar .subscribe #mc_embed_signup_scroll .mc-field-group input[type="email"] {
   width: 100%;
+}
+
+.navbar .subscribe #mc_embed_signup_scroll .mc-field-group .mce_inline_error {
+  font-weight: 400 !important;
+  margin: 0 !important;
+}
+
+.navbar .subscribe #mce-success-response {
+  height: 100%;
   background-color: lightgreen;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  z-index: 999;
-}
-
-.mc4wp-response p {
-  margin: 0;
-  padding: 15px;
-}
-
-.navbar .subscribe input[type="submit"],
-.navbar .subscribe input[type="email"] {
-  font-size: 15px;
-}
-
-.navbar .mc4wp-response {
-  margin: 10px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 10px;
 }
 
 .wpforms-container {

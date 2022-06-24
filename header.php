@@ -19,6 +19,10 @@
             color: <?php echo get_theme_mod('landing_heading_color'); ?>;
         }
 
+        .event-info .date {
+            color: <?php echo get_theme_mod('landing_heading_color'); ?>;
+        }
+
         .navbar li a:hover, .custom-button:hover {
             background-color: <?php echo get_theme_mod('landing_heading_color'); ?> !important;
             color: <?php echo get_theme_mod('navbar_link_color'); ?> !important;

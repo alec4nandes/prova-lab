@@ -102,9 +102,14 @@ function displayEventsCategory(catID, events, isBootcamp) {
                 </p>`
             : ""
     }
-        <div class="events-wrapper">`;
-    events.forEach((event) => (result += displayEvent(event)));
-    result += "</div></div>";
+        <div class="arrows-wrapper" style="display: flex; align-items: center;">
+            <div class="events-wrapper">`;
+                events.forEach((event) => (result += displayEvent(event)));
+            result += `
+            </div>
+            <h1 class="section-title" style="padding-left: 10px;">▶︎</h1>
+        </div>
+    </div>`;
     return result;
 }
 

@@ -226,6 +226,16 @@ add_action('widgets_init', 'register_my_sidebars');
 function register_my_sidebars()
 {
     register_sidebar([
+        'name' => 'Navigation',
+        'id' => 'navbar',
+        'class' => 'navbar',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+    ]);
+
+    register_sidebar([
         'name' => 'Footer',
         'id' => 'footer',
         'class' => 'footer',

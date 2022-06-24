@@ -73,6 +73,7 @@ hr {
 ul:not(#menu-navigation) {
     list-style: outside disc;
     margin-left: 1em;
+    overflow: hidden;
 }
 
 ul:not(#menu-navigation) li {

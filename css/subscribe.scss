@@ -1,65 +1,70 @@
-.subscribe {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0 15px;
-
-    input {
-        height: 30px;
-        border-radius: 0;
-        box-sizing: border-box;
-        -webkit-appearance: none;
-        -webkit-border-radius: 0;
-
-        &:focus {
-            outline: 0;
-        }
-
-        &[type="email"] {
-            padding-right: 10px;
-            transition: 1s;
-
-            &:focus {
-                background-color: lightgreen !important;
-            }
-        }
-
-        &[type="submit"] {
-            padding: 0 15px;
-            position: relative;
-            left: -5px;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-}
-
-.mc4wp-response {
-    width: 100%;
-    background-color: lightgreen;
-    box-sizing: border-box;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-
-    p {
-        margin: 0;
-        padding: 15px;
-    }
-}
-
 .navbar {
     .subscribe {
-        input[type="submit"],
-        input[type="email"] {
-            font-size: 15px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-weight: 400 !important;
+        padding: 0 15px;
+
+        input {
+            height: 30px;
+            border-radius: 0;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &[type="email"],
+            &[type="submit"] {
+                font-size: 15px;
+            }
+
+            &[type="email"] {
+                padding-right: 10px;
+                transition: 1s;
+
+                &:focus {
+                    background-color: lightgreen !important;
+                }
+            }
+
+            &[type="submit"] {
+                padding: 0 15px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
-    }
-    .mc4wp-response {
-        margin: 10px 0 0;
+
+        #mc_embed_signup_scroll {
+            display: flex;
+
+            .mc-field-group {
+                width: 180px;
+
+                input[type="email"] {
+                    width: 100%;
+                }
+
+                .mce_inline_error {
+                    font-weight: 400 !important;
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        #mce-success-response {
+            height: 100%;
+            background-color: lightgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 10px;
+        }
     }
 }
 

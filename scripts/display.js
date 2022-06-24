@@ -87,25 +87,32 @@ function isVisible(top) {
 }
 
 function parallaxScrollHandler(elem) {
+    console.log(distanceFromCenter(elem));
     const { top } = elem.getBoundingClientRect(),
         isShort = isShortScreen(),
         isSmall = isSmallScreen();
     isVisible(top) &&
         (elem.style.backgroundPositionY = `calc(${
-            // changed from 50% to 25% to keep images more towards top of screen
             elem.id === "top"
                 ? isShort
                     ? "-100px"
                     : isSmall
                     ? "-10vh"
                     : "50%"
-                : "25%"
+                : "50%"
         } + ${distanceFromCenter(elem) / factor}px)`);
     elem.id === "top" &&
         (elem.style.backgroundPositionX = isSmall ? "50%" : "50vw");
 }
 
 function setElemBgSize(elem) {
+    const style = getComputedStyle(elem);
+    console.log(
+        window.innerHeight -
+            (elem.offsetHeight -
+                ((+style.borderTopWidth || 0) +
+                    (+style.borderBottomWidth || 0)))
+    );
     elem.style.backgroundSize =
         elem.id === "top"
             ? isShortScreen()
@@ -114,11 +121,13 @@ function setElemBgSize(elem) {
                 ? "60vh"
                 : "600px auto"
             : // 0.75 = 3/4 ratio
-            elem.offsetWidth / elem.offsetHeight < 0.75
+            elem.offsetWidth < elem.offsetHeight
             ? // tall and thin
-              "auto 110%"
+              `auto calc(100% + ${
+                  (window.innerHeight - elem.scrollHeight) / factor
+              }px)`
             : // wide and fat
-              "110% auto";
+              `100% auto`;
 }
 
 function distanceFromCenter(elem) {
