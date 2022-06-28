@@ -56,7 +56,7 @@ function displayEventsStatus(obj, i, isBootcamp) {
             <h2 class="section-title">${i ? "Past" : "Upcoming"} ${
         isBootcamp ? "Bootcamps" : "Events"
     } ${isBootcamp ? `</h1><h3>` : ""} (${eventsStatusCounter(entries)}) ${
-        isBootcamp ? "&nbsp;&#x25B6;&#xFE0E;</h3>" : "</h2>"
+        isBootcamp ? "</h3>" : "</h2>"
     }`;
     if (!entries.length) {
         const pageURL = `https://www.eventbrite.com/o/${organizerID}`;
@@ -91,7 +91,7 @@ function displayEventsCategory(catID, events, isBootcamp) {
     let result = `<div class="events-category">${
         isBootcamp
             ? ""
-            : `<h3 class='category-name'>${catName}<br/>(${events.length}) &nbsp;&#x25B6;&#xFE0E;</h3>`
+            : `<h3 class='category-name'>${catName} (${events.length})</h3>`
     }${
         isSIP
             ? `<p>
@@ -103,14 +103,40 @@ function displayEventsCategory(catID, events, isBootcamp) {
             : ""
     }
         <div class="arrows-wrapper" style="display: flex; align-items: center;">
+            <h1 class="arrow section-title" style="padding-right: 10px;" onclick="scrollEvents(event, false)">\u25C0&#xFE0E;</h1>
             <div class="events-wrapper">`;
-                events.forEach((event) => (result += displayEvent(event)));
-            result += `
+    events.forEach((event) => (result += displayEvent(event)));
+    result += `
             </div>
-            <h1 class="section-title" style="padding-left: 10px;">▶︎</h1>
+            <h1 class="arrow section-title" style="padding-left: 10px;" onclick="scrollEvents(event, true)">\u25B6&#xFE0E;</h1>
         </div>
     </div>`;
     return result;
+}
+
+const getPixelInt = (str) => +str.replace("px", "");
+
+function scrollEvents(event, isRight) {
+    const arrowWrapper = event.target.parentNode,
+        eventsWrapper =
+            arrowWrapper.getElementsByClassName("events-wrapper")[0],
+        wrapperWidth = getPixelInt(getComputedStyle(eventsWrapper).width),
+        eventsInfoArr = [
+            ...arrowWrapper.getElementsByClassName("event-info"),
+        ].filter((info) => {
+            const left = info.offsetLeft,
+                right = left + info.offsetWidth;
+            return isRight
+                ? right > eventsWrapper.scrollLeft + wrapperWidth
+                : ~~(left - eventsWrapper.scrollLeft) < 0;
+        }),
+        eventsInfo = isRight ? eventsInfoArr[0] : eventsInfoArr.pop();
+    eventsInfo &&
+        eventsWrapper.scrollTo({
+            top: 0,
+            left: eventsInfo.offsetLeft,
+            behavior: "smooth",
+        });
 }
 
 function displayEvent(event) {

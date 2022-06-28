@@ -19,6 +19,12 @@
             color: <?php echo get_theme_mod('landing_heading_color'); ?>;
         }
 
+        .arrows-wrapper .arrow:hover {
+            color: <?php echo get_theme_mod('navbar_bg_color'); ?>;
+            cursor: pointer;
+            font-size: 2rem !important;
+        }
+
         .event-info .date {
             color: <?php echo get_theme_mod('landing_heading_color'); ?>;
         }
