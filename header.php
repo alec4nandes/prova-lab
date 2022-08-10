@@ -9,7 +9,6 @@
     <script>
         const eventsData = <?php echo $events_data; ?>,
             categoryIDs = <?php echo $category_ids; ?>;
-        console.log(eventsData);
     </script>
     <style>
         a:not(.custom-button), .subscribe-autofocus-link {
