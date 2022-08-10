@@ -28,7 +28,7 @@ function populateEvents({ isBootcamp }) {
 
 try {
     populateEvents({ isBootcamp: true });
-    populateEvents({ isBootcamp: false });
+    // populateEvents({ isBootcamp: false });
 } catch (err) {
     console.log(err);
 }
@@ -49,7 +49,7 @@ function displayEventsStatus(obj, i, isBootcamp) {
     const entries = Object.entries(obj)
         .filter(([catID]) =>
             // Eventbrite ID for Bootcamps 101: Business & Professional
-            isBootcamp ? catID === "101" : catID !== "101"
+            isBootcamp ? catID === 101 : catID !== 101
         )
         .sort(sortCategoriesByMostRecent);
     let result = `<div class="events-status">

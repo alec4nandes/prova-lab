@@ -1,32 +1,17 @@
 .columns.rotating-left, .columns.rotating-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .columns .rotating {
   width: 30%;
   height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-sizing: border-box;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 25px;
 }
-
 .columns .rotating img {
   height: auto !important;
   width: 100% !important;
@@ -40,5 +25,4 @@
     width: 70%;
     max-width: 350px;
   }
-}
-/*# sourceMappingURL=rotating.css.map */
+}/*# sourceMappingURL=rotating.css.map */

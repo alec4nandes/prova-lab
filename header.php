@@ -9,6 +9,7 @@
     <script>
         const eventsData = <?php echo $events_data; ?>,
             categoryIDs = <?php echo $category_ids; ?>;
+        console.log(eventsData);
     </script>
     <style>
         a:not(.custom-button), .subscribe-autofocus-link {
@@ -23,6 +24,10 @@
             color: <?php echo get_theme_mod('navbar_bg_color'); ?>;
             cursor: pointer;
             font-size: 2rem !important;
+        }
+
+        .upcoming-header {
+            background-color: <?php echo get_theme_mod('landing_heading_color'); ?>
         }
 
         .event-info .date {

@@ -813,3 +813,21 @@ const sipEvents = [
         status: "completed",
     },
 ];
+
+// function updateSIPs() {
+//     const options = { year: "numeric", month: "long", day: "numeric" };
+//     sipEvents.forEach((event) => {
+//         event.start.utc = new Date(event.start.utc).toLocaleDateString(
+//             "en-US",
+//             options
+//         );
+//         event.end.utc = new Date(event.end.utc).toLocaleDateString(
+//             "en-US",
+//             options
+//         );
+//     });
+// }
+
+// updateSIPs();
+
+// console.log(JSON.stringify(sipEvents));

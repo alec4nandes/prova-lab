@@ -3,17 +3,14 @@
   width: 100% !important;
   display: inline-block;
 }
-
-.custom-contact input[type="email"],
-.custom-contact input[type="text"] {
+.custom-contact input[type=email],
+.custom-contact input[type=text] {
   margin-top: 20px !important;
 }
-
 .custom-contact textarea {
   margin-top: 30px !important;
   padding-left: 5px !important;
 }
-
 .custom-contact .wpforms-field-label,
 .custom-contact .wpforms-field-label > * {
   visibility: hidden !important;
@@ -28,5 +25,4 @@
   .custom-contact {
     margin: auto !important;
   }
-}
-/*# sourceMappingURL=contact.css.map */
+}/*# sourceMappingURL=contact.css.map */

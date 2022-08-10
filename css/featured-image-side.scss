@@ -57,6 +57,9 @@
                     margin-bottom: 60px;
 
                     .arrows-wrapper {
+                        display: flex;
+                        align-items: center;
+
                         .arrow {
                             font-size: 2rem !important;
                         }
@@ -78,14 +81,25 @@
                                 box-shadow: 0 0 7px #ccc;
                                 box-sizing: border-box;
                                 overflow: auto;
-                                padding: 15px;
 
-                                .event-name {
-                                    font-size: 1.3rem;
+                                .upcoming-header {
+                                    color: white;
+                                    font-weight: bold;
+                                    margin: 0;
+                                    padding: 5px;
+                                    text-align: center;
                                 }
 
-                                .date {
-                                    font-weight: bold;
+                                .event-content {
+                                    padding: 15px;
+
+                                    .event-name {
+                                        font-size: 1.3rem;
+                                    }
+
+                                    .date {
+                                        font-weight: bold;
+                                    }
                                 }
                             }
                         }
