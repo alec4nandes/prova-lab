@@ -824,19 +824,3 @@ function get_specific_events($event_type)
     ];
     return array_merge(array_filter($assoc1, 'no_repeating_sips'), $assoc2, $old_sips);
 }
-
-function eventbriteData()
-{
-    $token = get_option('api_key');
-    $data_url = "https://www.eventbriteapi.com/v3/organizers/33834574653/events/?token=" . $token;
-    $events_data = get_data($data_url);
-    $category_ids = [];
-    foreach ($events_data->events as $event) {
-        $category_ids[$event->category_id] = "";
-    }
-    foreach (array_keys($category_ids) as $id) {
-        $category_ids[$id] =
-        get_data("https://www.eventbriteapi.com/v3/categories/" . $id . "/?token=" . $token)->name;
-    }
-    return ['data' => $events_data, 'ids' => $category_ids];
-}
