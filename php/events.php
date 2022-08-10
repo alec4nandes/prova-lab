@@ -4,15 +4,11 @@ function get_data($url)
 {
     // Initialize a CURL session.
     $ch = curl_init();
-
     // Return Page contents.
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
     //grab URL and pass it to the variable.
     curl_setopt($ch, CURLOPT_URL, $url);
-
     $result = json_decode(curl_exec($ch));
-
     return $result;
 }
 
@@ -47,6 +43,15 @@ function make_assoc_array($array)
 
 function get_specific_events($event_type)
 {
+    $prova_eventbrite_id = 33834574653;
+    $events1 = get_all_events($prova_eventbrite_id, $event_type);
+    $assoc1 = make_assoc_array($events1);
+    if ($event_type === 'bootcamps') {
+        return $assoc1;
+    }
+    $pianobar_eventbrite_id = 44505532113;
+    $events2 = get_all_events($pianobar_eventbrite_id, $event_type);
+    $assoc2 = make_assoc_array($events2);
     $old_sips = [
         [
             "name" => [
@@ -817,36 +822,21 @@ function get_specific_events($event_type)
             "status" => "completed",
         ],
     ];
-    $prova_eventbrite_id = 33834574653;
-    $events1 = get_all_events($prova_eventbrite_id, $event_type);
-    $assoc1 = make_assoc_array($events1);
-    if ($event_type === 'bootcamps') {
-        return $assoc1;
-    }
-    $pianobar_eventbrite_id = 44505532113;
-    $events2 = get_all_events($pianobar_eventbrite_id, $event_type);
-    $assoc2 = make_assoc_array($events2);
-    return array_merge($old_sips, array_filter($assoc1, 'no_repeating_sips'), $assoc2);
+    return array_merge(array_filter($assoc1, 'no_repeating_sips'), $assoc2, $old_sips);
 }
 
 function eventbriteData()
 {
     $token = get_option('api_key');
-
     $data_url = "https://www.eventbriteapi.com/v3/organizers/33834574653/events/?token=" . $token;
-
     $events_data = get_data($data_url);
-
     $category_ids = [];
-
     foreach ($events_data->events as $event) {
         $category_ids[$event->category_id] = "";
     }
-
     foreach (array_keys($category_ids) as $id) {
         $category_ids[$id] =
         get_data("https://www.eventbriteapi.com/v3/categories/" . $id . "/?token=" . $token)->name;
     }
-
     return ['data' => $events_data, 'ids' => $category_ids];
 }
