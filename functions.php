@@ -69,6 +69,14 @@ function load_styles_and_scripts()
         0.1,
         true
     );
+
+    wp_enqueue_script(
+        'events-script',
+        get_stylesheet_directory_uri() . '/scripts/events.js',
+        [],
+        0.1,
+        true
+    );
 }
 
 add_action('init', 'register_my_menus');
