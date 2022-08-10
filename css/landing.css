@@ -7,15 +7,13 @@ main#landing .co-founder-info {
     font-size: 2.4rem;
   }
 }
-
 @media only screen and (max-width: 640px) {
   main#landing .columns .content,
-  main#landing .columns .content p {
+main#landing .columns .content p {
     text-align: center;
   }
   #landing-1 {
     height: 350px;
     width: 350px;
   }
-}
-/*# sourceMappingURL=landing.css.map */
+}/*# sourceMappingURL=landing.css.map */

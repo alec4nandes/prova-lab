@@ -1,118 +1,86 @@
 .navbar .subscribe {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: flex-end;
+  justify-content: center;
   font-weight: 400 !important;
   padding: 0 15px;
 }
-
 .navbar .subscribe input {
   height: 30px;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
-
 .navbar .subscribe input:focus {
   outline: 0;
 }
-
-.navbar .subscribe input[type="email"], .navbar .subscribe input[type="submit"] {
+.navbar .subscribe input[type=email], .navbar .subscribe input[type=submit] {
   font-size: 15px;
 }
-
-.navbar .subscribe input[type="email"] {
+.navbar .subscribe input[type=email] {
   padding-right: 10px;
-  -webkit-transition: 1s;
   transition: 1s;
 }
-
-.navbar .subscribe input[type="email"]:focus {
+.navbar .subscribe input[type=email]:focus {
   background-color: lightgreen !important;
 }
-
-.navbar .subscribe input[type="submit"] {
+.navbar .subscribe input[type=submit] {
   padding: 0 15px;
 }
-
-.navbar .subscribe input[type="submit"]:hover {
+.navbar .subscribe input[type=submit]:hover {
   cursor: pointer;
 }
-
 .navbar .subscribe #mc_embed_signup_scroll {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .navbar .subscribe #mc_embed_signup_scroll .mc-field-group {
   width: 180px;
 }
-
-.navbar .subscribe #mc_embed_signup_scroll .mc-field-group input[type="email"] {
+.navbar .subscribe #mc_embed_signup_scroll .mc-field-group input[type=email] {
   width: 100%;
 }
-
 .navbar .subscribe #mc_embed_signup_scroll .mc-field-group .mce_inline_error {
   font-weight: 400 !important;
   margin: 0 !important;
 }
-
 .navbar .subscribe #mce-success-response {
   height: 100%;
   background-color: lightgreen;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 5px 10px;
 }
 
 .wpforms-container {
   margin: 0 !important;
 }
-
 .wpforms-container .wpforms-confirmation-container-full {
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   text-align: center;
 }
-
 .wpforms-container form * {
   padding: 0 !important;
 }
 
 button,
-input[type="submit"],
-input[type="email"] {
+input[type=submit],
+input[type=email] {
   font-family: "Oxygen", sans-serif;
 }
 
 button,
-input[type="submit"] {
+input[type=submit] {
   border: 0 !important;
   text-transform: uppercase !important;
-  -webkit-transition: 1s !important;
   transition: 1s !important;
 }
 
-input[type="email"],
-input[type="text"],
+input[type=email],
+input[type=text],
 textarea {
   max-width: 100% !important;
   background: transparent !important;
@@ -122,5 +90,4 @@ textarea {
   border-radius: 0 !important;
   font-family: "Oxygen", sans-serif;
   padding-left: 5px !important;
-}
-/*# sourceMappingURL=subscribe.css.map */
+}/*# sourceMappingURL=subscribe.css.map */

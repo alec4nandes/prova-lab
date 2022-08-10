@@ -3,35 +3,21 @@
 }
 
 .columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .columns.parallax-left {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 .columns.parallax-right {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 .columns.parallax-full-width .parallax {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .columns.parallax-full-width .parallax .content {
   text-align: center;
 }
-
 .columns.parallax-full-width .parallax .content .parallax-full-width-box {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -40,14 +26,11 @@
   padding: 15px;
   text-align: center;
 }
-
 .columns:not(.parallax-full-width) .content {
   width: 70%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 80px 80px 20px;
 }
-
 .columns .parallax {
   min-height: 350px;
   width: 30%;
@@ -64,23 +47,16 @@
     padding: 40px 15px 80px;
   }
   .columns.parallax-left {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .columns.parallax-right {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .columns .content,
-  .columns .parallax {
+.columns .parallax {
     width: 100%;
   }
   .columns .content {
     padding: 30px 15px 0;
   }
-}
-/*# sourceMappingURL=parallax.css.map */
+}/*# sourceMappingURL=parallax.css.map */
