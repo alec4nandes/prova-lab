@@ -63,24 +63,8 @@ function load_styles_and_scripts()
     );
 
     wp_enqueue_script(
-        'sip-data-script',
-        get_stylesheet_directory_uri() . '/scripts/sip-data.js',
-        [],
-        0.1,
-        true
-    );
-
-    wp_enqueue_script(
         'display-script',
         get_stylesheet_directory_uri() . '/scripts/display.js',
-        [],
-        0.1,
-        true
-    );
-
-    wp_enqueue_script(
-        'events-script',
-        get_stylesheet_directory_uri() . '/scripts/events.js',
         [],
         0.1,
         true

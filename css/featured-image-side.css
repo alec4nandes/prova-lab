@@ -40,27 +40,22 @@
 .feature-image-side .content-wrapper .content .events-spacer {
   height: 40px;
 }
-.feature-image-side .content-wrapper .content #events,
-.feature-image-side .content-wrapper .content #bootcamps {
+.feature-image-side .content-wrapper .content .eventbrite-listings {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
-.feature-image-side .content-wrapper .content #events .events-status,
-.feature-image-side .content-wrapper .content #bootcamps .events-status {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status {
   margin-bottom: 60px;
 }
-.feature-image-side .content-wrapper .content #events .events-status .arrows-wrapper,
-.feature-image-side .content-wrapper .content #bootcamps .events-status .arrows-wrapper {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status .arrows-wrapper {
   display: flex;
   align-items: center;
 }
-.feature-image-side .content-wrapper .content #events .events-status .arrows-wrapper .arrow,
-.feature-image-side .content-wrapper .content #bootcamps .events-status .arrows-wrapper .arrow {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status .arrows-wrapper .arrow {
   font-size: 2rem !important;
 }
-.feature-image-side .content-wrapper .content #events .events-status .arrows-wrapper .events-wrapper,
-.feature-image-side .content-wrapper .content #bootcamps .events-status .arrows-wrapper .events-wrapper {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status .arrows-wrapper .events-wrapper {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -69,8 +64,7 @@
   padding: 15px 15px 15px 5px;
   position: relative;
 }
-.feature-image-side .content-wrapper .content #events .events-status .arrows-wrapper .events-wrapper .event-info,
-.feature-image-side .content-wrapper .content #bootcamps .events-status .arrows-wrapper .events-wrapper .event-info {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status .arrows-wrapper .events-wrapper .event-info {
   min-width: 250px;
   max-width: 250px;
   max-height: 420px;
@@ -79,24 +73,20 @@
   box-sizing: border-box;
   overflow: auto;
 }
-.feature-image-side .content-wrapper .content #events .events-status .arrows-wrapper .events-wrapper .event-info .upcoming-header,
-.feature-image-side .content-wrapper .content #bootcamps .events-status .arrows-wrapper .events-wrapper .event-info .upcoming-header {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status .arrows-wrapper .events-wrapper .event-info .upcoming-header {
   color: white;
   font-weight: bold;
   margin: 0;
   padding: 5px;
   text-align: center;
 }
-.feature-image-side .content-wrapper .content #events .events-status .arrows-wrapper .events-wrapper .event-info .event-content,
-.feature-image-side .content-wrapper .content #bootcamps .events-status .arrows-wrapper .events-wrapper .event-info .event-content {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status .arrows-wrapper .events-wrapper .event-info .event-content {
   padding: 15px;
 }
-.feature-image-side .content-wrapper .content #events .events-status .arrows-wrapper .events-wrapper .event-info .event-content .event-name,
-.feature-image-side .content-wrapper .content #bootcamps .events-status .arrows-wrapper .events-wrapper .event-info .event-content .event-name {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status .arrows-wrapper .events-wrapper .event-info .event-content .event-name {
   font-size: 1.3rem;
 }
-.feature-image-side .content-wrapper .content #events .events-status .arrows-wrapper .events-wrapper .event-info .event-content .date,
-.feature-image-side .content-wrapper .content #bootcamps .events-status .arrows-wrapper .events-wrapper .event-info .event-content .date {
+.feature-image-side .content-wrapper .content .eventbrite-listings .events-status .arrows-wrapper .events-wrapper .event-info .event-content .date {
   font-weight: bold;
 }
 

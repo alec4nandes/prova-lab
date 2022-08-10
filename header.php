@@ -1,15 +1,9 @@
-<?php include_once "php/events.php";?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        const eventsData = <?php echo $events_data; ?>,
-            categoryIDs = <?php echo $category_ids; ?>;
-    </script>
     <style>
         a:not(.custom-button), .subscribe-autofocus-link {
             color: <?php echo get_theme_mod('navbar_bg_color'); ?>;
@@ -100,7 +94,6 @@
             background-color: <?php echo get_theme_mod('landing_heading_color'); ?> !important;
             color: <?php echo get_theme_mod('navbar_link_color'); ?> !important;
         }
-
     </style>
     <?php wp_head();?>
 </head>
