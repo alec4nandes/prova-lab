@@ -14,12 +14,12 @@ function get_data($url)
 
 function filter_out_sips($event)
 {
-    return str_contains($event->name->text, "SIP");
+    return str_contains($event->name->text, 'SIP');
 }
 
 function filter_out_bootcamps($event)
 {
-    return str_contains(strtoupper($event->name->text), "BOOTCAMP");
+    return str_contains(strtoupper($event->name->text), 'BOOTCAMP');
 }
 
 function get_series_id($event)
@@ -40,10 +40,10 @@ function not_series($event)
 function get_all_events($eventbrite_id, $event_type)
 {
     $token = get_option('api_key');
-    $data_url = "https://www.eventbriteapi.com/v3/organizers/" . $eventbrite_id . "/events/?token=" . $token;
+    $data_url = 'https://www.eventbriteapi.com/v3/organizers/' . $eventbrite_id . '/events/?token=' . $token;
     $events = get_data($data_url)->events;
-    $result = array_filter($events, "filter_out_" . $event_type);
-    $series = array_filter($result, "is_series");
+    $result = array_filter($events, 'filter_out_' . $event_type);
+    $series = array_filter($result, 'is_series');
     $series_ids = [];
     foreach ($series as $ser) {
         $id = get_series_id($ser);
@@ -58,13 +58,13 @@ function get_all_events($eventbrite_id, $event_type)
             $series_events[] = $event;
         }
     }
-    $no_series = array_filter($result, "not_series");
+    $no_series = array_filter($result, 'not_series');
     return array_merge($series_events, $no_series);
 }
 
 function no_repeating_sips($event)
 {
-    return strtotime($event['start']['utc']) > strtotime("August 9, 2022");
+    return strtotime($event['start']['utc']) > strtotime('August 9, 2022');
 }
 
 function make_assoc_array($array)
