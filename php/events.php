@@ -53,7 +53,7 @@ function get_all_events($eventbrite_id, $event_type)
     }
     $series_events = [];
     foreach ($series_ids as $id) {
-        $ser_events = get_data('https://www.eventbriteapi.com/v3/series/' . $id . '/events/?token=' . get_option('api_key'))->events;
+        $ser_events = get_data('https://www.eventbriteapi.com/v3/series/' . $id . '/events/?token=' . $token)->events;
         foreach ($ser_events as $event) {
             $series_events[] = $event;
         }
