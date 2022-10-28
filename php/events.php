@@ -22,12 +22,44 @@ function filter_out_bootcamps($event)
     return str_contains(strtoupper($event->name->text), "BOOTCAMP");
 }
 
+function get_series_id($event)
+{
+    return $event->series_id;
+}
+
+function is_series($event)
+{
+    return $event->is_series;
+}
+
+function not_series($event)
+{
+    return !is_series($event);
+}
+
 function get_all_events($eventbrite_id, $event_type)
 {
     $token = get_option('api_key');
     $data_url = "https://www.eventbriteapi.com/v3/organizers/" . $eventbrite_id . "/events/?token=" . $token;
     $events = get_data($data_url)->events;
-    return array_filter($events, "filter_out_" . $event_type);
+    $result = array_filter($events, "filter_out_" . $event_type);
+    $series = array_filter($result, "is_series");
+    $series_ids = [];
+    foreach ($series as $ser) {
+        $id = get_series_id($ser);
+        if (!in_array($id, $series_ids)) {
+            $series_ids[] = $id;
+        }
+    }
+    $series_events = [];
+    foreach ($series_ids as $id) {
+        $ser_events = get_data('https://www.eventbriteapi.com/v3/series/' . $id . '/events/?token=' . get_option('api_key'))->events;
+        foreach ($ser_events as $event) {
+            $series_events[] = $event;
+        }
+    }
+    $no_series = array_filter($result, "not_series");
+    return array_merge($series_events, $no_series);
 }
 
 function no_repeating_sips($event)

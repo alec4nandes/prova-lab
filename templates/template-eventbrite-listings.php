@@ -12,10 +12,15 @@ function sort_by_date($event1, $event2)
 
 usort($events, "sort_by_date");
 
-function format_date($event)
+function format_date_helper($event)
 {
     $timestamp = $event['start'][array_key_exists('local', $event['start']) ? 'local' : 'utc'];
-    return date('j F Y', strtotime($timestamp));
+    return strtotime($timestamp);
+}
+
+function format_date($event)
+{
+    return date('j F Y', format_date_helper($event));
 }
 ?>
 
@@ -38,7 +43,7 @@ function format_date($event)
                 <div class="events-wrapper">
                     <?php foreach ($events as $event): ?>
                     <div class="event-info">
-                        <?php if ($event['status'] !== "completed"): ?>
+                        <?php if (time() < format_date_helper($event)): ?>
                             <p class="upcoming-header">UPCOMING</p>
                         <?php endif;?>
                         <div class="event-content">
